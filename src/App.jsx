@@ -1,4 +1,5 @@
 import './App.css'
+import MyHello from './components/MyHello'
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
 // パスカルケースというのは頭文字が大文字で書く書き方
@@ -10,6 +11,10 @@ function App() {
     <>
       <h1>React初期画面</h1>
       <p>Reactがんばります</p>
+
+      <MyHello myName="Taro" />
+      <MyHello myName="Jiro" />
+      <MyHello />
     </>
   )
 }
