@@ -1,0 +1,252 @@
+/* アプリ全体 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f6f9ff;
+    color: #3e4756;
+    font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px 72px;
+}
+
+main>h1 {
+    margin: 0 0 28px;
+    font-size: 28px;
+}
+
+main>section {
+    margin: 0 0 24px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+}
+
+main>section>h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+/* Q1・Q4共通 */
+.practice-card {
+    padding: 24px;
+    background: #f6f9ff;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.practice-label {
+    margin: 0 0 12px;
+    color: #69788c;
+}
+
+/* Q1 */
+.toggle-button {
+    min-width: 130px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #a9b2be;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.toggle-button.is-on {
+    background: #269d84;
+}
+
+/* Q3 */
+.color-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.color-item {
+    flex: 1 1 120px;
+    padding: 16px;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.color-item p {
+    margin: 0 0 12px;
+}
+
+.color-button {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #a9b2be;
+    color: #fff;
+    cursor: pointer;
+}
+
+.color-button.is-on {
+    background: var(--active-color);
+}
+
+/* Q2 */
+.like-list {
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.like-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+}
+
+.like-item+.like-item {
+    border-top: 1px solid #e6ebf1;
+}
+
+.like-title {
+    font-weight: bold;
+}
+
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid #eccbd2;
+    border-radius: 20px;
+    background: #fff7f8;
+    color: #a84863;
+    cursor: pointer;
+}
+
+/* Q4 */
+.primary-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #4d80c9;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(20, 35, 55, 0.6);
+}
+
+.modal-content {
+    width: min(100%, 420px);
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    text-align: left;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-x {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Q5 */
+.users-panel {
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.users-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    background: #f6f9ff;
+}
+
+.users-toolbar select {
+    min-width: 150px;
+    padding: 8px;
+    border: 1px solid #b9c6d7;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.user-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    border-top: 1px solid #e6ebf1;
+}
+
+.user-job {
+    display: block;
+    margin-top: 3px;
+    color: #728096;
+    font-size: 13px;
+}
+
+.user-count {
+    margin: 0;
+    padding: 10px 16px;
+    border-top: 1px solid #e6ebf1;
+    background: #fafcff;
+    color: #68778b;
+    font-size: 13px;
+}
+
+@media (max-width: 560px) {
+    .app-container {
+        padding: 24px 12px 48px;
+    }
+
+    .exercise-section {
+        padding: 18px 14px;
+    }
+
+    .like-item {
+        flex-wrap: wrap;
+    }
+}
