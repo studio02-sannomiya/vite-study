@@ -1,0 +1,78 @@
+/* study.css - Q1〜Q3 共通スタイル */
+:root {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    color: #3e4756;
+    background: #f6f9ff;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    width: min(760px, calc(100% - 32px));
+    margin: 40px auto;
+}
+
+main>section {
+    margin-bottom: 24px;
+}
+
+.study-card {
+    padding: 24px;
+    border: 1px solid #dce5f2;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.study-title {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.study-description {
+    margin: 0 0 24px;
+    color: #657184;
+    font-size: 14px;
+}
+
+.study-value {
+    margin: 0 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.study-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.study-button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #97accf;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.study-button:hover {
+    background: #8199c1;
+}
+
+.study-button:focus-visible {
+    outline: 3px solid #00c6ba;
+    outline-offset: 3px;
+}
+
+.study-button--secondary {
+    border: 1px solid #97accf;
+    background: #fff;
+    color: #3e4756;
+}
+
+.study-button--secondary:hover {
+    background: #eef3fb;
+}
