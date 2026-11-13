@@ -1,6 +1,7 @@
 import './App.css'
 import FormCheck from './components/FormCheck'
 import FormCheckMulti from './components/FormCheckMulti'
+import FormFile from './components/FormFile'
 import FormRadio from './components/FormRadio'
 import FormSelect from './components/FormSelect'
 import FormTextArea from './components/FormTextArea'
@@ -30,6 +31,8 @@ function App() {
       <FormCheck />
 
       <FormCheckMulti />
+
+      <FormFile />
     </>
   )
 }
