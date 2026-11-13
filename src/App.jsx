@@ -1,4 +1,5 @@
 import './App.css'
+import FormRadio from './components/FormRadio'
 import FormSelect from './components/FormSelect'
 import FormTextArea from './components/FormTextArea'
 import StateForm from './components/StateForm'
@@ -21,6 +22,8 @@ function App() {
       <FormTextArea />
 
       <FormSelect />
+
+      <FormRadio />
     </>
   )
 }
