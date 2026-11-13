@@ -1,4 +1,6 @@
 import './App.css'
+import FormSelect from './components/FormSelect'
+import FormTextArea from './components/FormTextArea'
 import StateForm from './components/StateForm'
 import StateFormUC from './components/StateFormUC'
 
@@ -15,6 +17,10 @@ function App() {
       <StateForm />
 
       <StateFormUC />
+
+      <FormTextArea />
+
+      <FormSelect />
     </>
   )
 }
