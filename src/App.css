@@ -1,0 +1,12 @@
+form {
+    background-color: #eee;
+    padding: 1rem;
+}
+
+form+form {
+    margin-top: 2rem;
+}
+
+.container {
+    margin: 16px 0;
+}
