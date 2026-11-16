@@ -1,33 +1,30 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export default function FormSelect() {
-    const [form, setForm] = useState({
-        animal: 'dog',
-    });
+export default function FormSelect({ form, myFunc }) {
+    // const [form, setForm] = useState({
+    //     animalSelect: 'dog',
+    // });
 
-    const handleForm = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
+    // const handleForm = (e) => {
+    //     setForm({
+    //         ...form,
+    //         [e.target.name]: e.target.value,
+    //     });
+    // };
 
-    const show = () => console.log(`好きな動物：${form.animal}`);
+    // const show = () => console.log(`好きな動物：${form.animal}`);
 
     return (
-        <form>
+        <>
             <div className="container">
-                <label htmlFor="animal">好きな動物：</label>
-                <select name="animal" id="animal" value={form.animal} onChange={handleForm}>
+                <label htmlFor="animalSelect">好きな動物：</label>
+                <select name="animalSelect" id="animalSelect" value={form.animalSelect} onChange={myFunc}>
                     <option value="dog">イヌ</option>
                     <option value="cat">ネコ</option>
                     <option value="hamster">ハムスター</option>
                     <option value="rabbit">ウサギ</option>
                 </select>
             </div>
-            <div className="container">
-                <button type="button" onClick={show}>送信</button>
-            </div>
-        </form>
+        </>
     )
 }

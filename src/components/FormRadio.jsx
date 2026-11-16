@@ -1,21 +1,21 @@
 import { useState } from "react"
 
-export default function FormRadio() {
-    const [form, setForm] = useState({
-        os: 'windows',
-    });
+export default function FormRadio({ form, myFunc }) {
+    // const [form, setForm] = useState({
+    //     os: 'windows',
+    // });
 
-    const handleForm = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
+    // const handleForm = (e) => {
+    //     setForm({
+    //         ...form,
+    //         [e.target.name]: e.target.value,
+    //     });
+    // };
 
-    const show = () => console.log(`使用OS：${form.os}`);
+    // const show = () => console.log(`使用OS：${form.os}`);
 
     return (
-        <form>
+        <>
             <fieldset>
                 <legend>使用OS：</legend>
 
@@ -25,7 +25,7 @@ export default function FormRadio() {
                     name="os"
                     id="os_win"
                     value="windows"
-                    onChange={handleForm}
+                    onChange={myFunc}
                     checked={form.os === "windows"} /><br />
 
                 <label htmlFor="os_mac">macOS</label>
@@ -34,7 +34,7 @@ export default function FormRadio() {
                     name="os"
                     id="os_mac"
                     value="mac"
-                    onChange={handleForm}
+                    onChange={myFunc}
                     checked={form.os === "mac"} /><br />
 
                 <label htmlFor="os_lin">Linux</label>
@@ -43,10 +43,10 @@ export default function FormRadio() {
                     name="os"
                     id="os_lin"
                     value="linux"
-                    onChange={handleForm}
+                    onChange={myFunc}
                     checked={form.os === "linux"} /><br />
             </fieldset>
-            <button type="button" onClick={show}>送信</button>
-        </form>
+
+        </>
     )
 }
