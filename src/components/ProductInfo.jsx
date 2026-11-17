@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from "react"
+import ProductDetailSkeleton from "./ProductDetailSkelton";
 // import ProductDetail from "./ProductDetail";
 
 // const ProductDetail = lazy(() => import("./ProductDetail"));
@@ -21,7 +22,7 @@ export default function ProductInfo() {
                 {showDetail ? "閉じる" : "詳細を見る"}
             </button>
             {showDetail && (
-                <Suspense fallback={<p>読み込み中...</p>}>
+                <Suspense fallback={<ProductDetailSkeleton />}>
                     <ProductDetail />
                 </Suspense>
             )}
