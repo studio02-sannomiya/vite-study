@@ -6,6 +6,9 @@ import Loading from './components/Loading'
 import { ErrorBoundary } from 'react-error-boundary'
 import ModuleBasic from './components/ModuleBasic/ModuleBasic'
 import EmotionBasic from './components/EmotionBasic'
+import ProductList from './components/ProductList/ProductList'
+import TogglePanel from './components/TogglePanel/TogglePanel'
+import HintBox from './components/HintBox/HintBox'
 
 
 const handleMeasure = (id, phase, actualDuration) => {
@@ -43,6 +46,22 @@ function App() {
       <section className="sec">
         <h2>Emotion</h2>
         <EmotionBasic />
+      </section>
+
+      <section className="sec">
+        <h2>問題1</h2>
+        <TogglePanel />
+      </section>
+
+      <section className="sec">
+        <h2>問題2</h2>
+        <HintBox />
+      </section>
+
+      <section className="sec">
+        <h2>問題3</h2>
+        <ProductList />
+
       </section>
     </>
   )
