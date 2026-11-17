@@ -1,4 +1,5 @@
 import './App.css'
+import ProductInfo from './components/ProductInfo'
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
 // パスカルケースというのは頭文字が大文字で書く書き方
@@ -11,6 +12,7 @@ function App() {
       <h1>Chapter5 コンポーネント開発（応用）</h1>
       <section className="sec">
         <h2>SuspenseとProfiler</h2>
+        <ProductInfo />
       </section>
     </>
   )
