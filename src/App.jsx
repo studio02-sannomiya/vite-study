@@ -8,8 +8,10 @@ function App() {
 
   return (
     <>
-      <h1>React初期画面</h1>
-      <p>Reactがんばります</p>
+      <h1>Chapter5 コンポーネント開発（応用）</h1>
+      <section className="sec">
+        <h2>SuspenseとProfiler</h2>
+      </section>
     </>
   )
 }

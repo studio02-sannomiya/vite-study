@@ -1,0 +1,133 @@
+h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/* 商品の詳細カード */
+.sec {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.sec h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+    color: var(--accent);
+}
+
+/* dt（項目名）と dd（値）を横並びにする */
+.sec dl {
+    display: grid;
+    /* 2列に分ける
+     1列目（dt）：max-content ＝ 中身の文字が折り返さずに収まる幅（いちばん長い項目名に合わせる）
+     2列目（dd）：1fr ＝ 残りの幅をすべて使う */
+    grid-template-columns: max-content 1fr;
+    gap: 8px 16px;
+    margin: 0;
+}
+
+.sec dt {
+    color: var(--muted);
+}
+
+.sec dd {
+    margin: 0;
+}
+
+/* =========================================================
+   ユーザー一覧
+   ========================================================= */
+
+.loading {
+    margin-top: 16px;
+    color: var(--muted);
+}
+
+/* 取得に失敗したとき（ErrorBoundary の fallback） */
+.error {
+    margin-top: 16px;
+    padding: 12px 16px;
+    color: var(--error);
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    border-radius: 6px;
+}
+
+.user_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 名前とメールアドレスを横並びにし、行の間に線を引く */
+.user_list li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.user_list li:last-child {
+    border-bottom: none;
+}
+
+.user_email {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================================
+   スケルトン表示（Suspense の fallback）
+   ========================================================= */
+
+/* 灰色のバー。光が左から右へ流れる */
+.skeleton {
+    height: 1em;
+    border-radius: 4px;
+    /* 灰色 → 少しだけ明るい灰色 → 灰色 のグラデーション */
+    background: linear-gradient(90deg, var(--border), #e8eaec, var(--border));
+    /* グラデーションを要素の2倍の幅にして、背景の位置を動かす */
+    background-size: 200%;
+    animation: shine 1.2s linear infinite;
+}
+
+/* 見出しの代わり */
+.skeleton_title {
+    width: 8em;
+    margin-bottom: 12px;
+}
+
+/* 項目名（dt）の代わり：中身が空だと列の幅が 0 になるので、幅を指定する */
+dt.skeleton {
+    width: 3em;
+}
+
+@keyframes shine {
+    to {
+        background-position: -200% 0;
+    }
+}
