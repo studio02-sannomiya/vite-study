@@ -1,17 +1,31 @@
-import './App.css'
+//app.jsx
 
-// Reactで扱うコンポーネント（関数）の名前はパスカルケース
-// パスカルケースというのは頭文字が大文字で書く書き方
-// ファイルの名前をつける際も、コンポーネントと同じく、
-// パスカルケース、かつ、コンポーネント名と一致させておくと便利。
-function App() {
+import { useState } from 'react';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import { createModeTheme } from './data/theme2.js';
+import MaterialModeButton from './components/MaterialModeButton/MaterialModeButton.jsx';
+import MaterialForm from './components/MaterialForm/MaterialForm.jsx';
+
+export default function App() {
+  // モードの状態管理
+  const [mode, setMode] = useState('light');
+
+  // モードの切り替え
+  const toggleMode = () => {
+    setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  // テーマの生成
+  const theme = createModeTheme(mode);
 
   return (
-    <>
-      <h1>React初期画面</h1>
-      <p>Reactがんばります</p>
-    </>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <MaterialModeButton mode={mode} onToggle={toggleMode} />
+      <MaterialForm />
 
-export default App
+      {/* 他のコンポーネントもここに配置 */}
+
+    </ThemeProvider>
+  );
+}
