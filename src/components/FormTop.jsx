@@ -6,13 +6,6 @@ import FormRadio from "./FormRadio";
 import FormCheckMulti from "./FormCheckMulti";
 
 export default function FormTop() {
-    // このstate変数formとセッタ関数setFormを使った関数を、
-    // 子コンポーネントにpropsとして渡し、
-    // 子コンポーネントからはuseStateや関数を消してください。
-    // 子コンポーネントに渡す関数を作り、それをpropsとして渡す
-    // その関数を受け取るためのprops名は myFunc とする。
-    // そして、子コンポーネントでmyFuncを受け取り、onChangeなどで実行される関数を、
-    // myFuncで受け取った関数を実行するようにする
     const [form, setForm] = useState({
         comment: `さまざまなフォーム要素を`,
         name: '創造太郎',
