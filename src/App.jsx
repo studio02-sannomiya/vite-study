@@ -1,4 +1,5 @@
 import './App.css'
+import FocusDemo from './components/FocusDemo/FocusDemo'
 import HookTimer from './components/HookTimer/HookTimer'
 import StateEffect from './components/StateEffect/StateEffect'
 
@@ -11,8 +12,13 @@ function App() {
   return (
     <>
       <h1>Chapter7 フック </h1>
+
+      <h2>useEffect</h2>
       <StateEffect />
       {/* <HookTimer init={10} /> */}
+
+      <h2>useRef</h2>
+      <FocusDemo />
     </>
   )
 }
