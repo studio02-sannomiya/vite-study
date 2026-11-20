@@ -1,6 +1,7 @@
 import './App.css'
 import FocusDemo from './components/FocusDemo/FocusDemo'
 import HookTimer from './components/HookTimer/HookTimer'
+import RefTimer from './components/RefTimer/RefTimer'
 import StateEffect from './components/StateEffect/StateEffect'
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
@@ -19,6 +20,7 @@ function App() {
 
       <h2>useRef</h2>
       <FocusDemo />
+      <RefTimer />
     </>
   )
 }

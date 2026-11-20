@@ -1,10 +1,18 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 export default function FocusDemo() {
     const inputRef = useRef(null);
 
+    // レンダー中
+    console.log("render", inputRef.current);
+
+    // マウント後
+    useEffect(() => {
+        console.log("effect", inputRef.current);
+    }, []);
+
     const handleClick = () => {
-        inputRef.current.focus();
+        inputRef.current?.focus();
     };
 
     return (
