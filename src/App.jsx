@@ -1,5 +1,12 @@
 import './App.css'
 import HookContext from './components/HookContext/HookContext'
+import UserProfile from './components/UserProfile/UserProfile';
+import UserContext from './context/UserContext';
+
+const user = {
+  name: "田中太郎",
+  email: "tanaka@example.com",
+};
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
 // パスカルケースというのは頭文字が大文字で書く書き方
@@ -13,6 +20,11 @@ function App() {
       <h2>use + Context</h2>
 
       <HookContext />
+
+      <UserContext value={user}>
+        <UserProfile />
+      </UserContext>
+
     </>
   )
 }
