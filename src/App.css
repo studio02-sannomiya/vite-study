@@ -1,0 +1,19 @@
+/* 親コンポーネント: HookContext */
+#c_main {
+    border: 2px solid steelblue;
+    padding: 1rem;
+}
+
+/* 子コンポーネント: HookContextChild */
+#c_child {
+    border: 2px dashed forestgreen;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+/* 孫コンポーネント: HookContextChildGrand */
+#c_child_grand {
+    background-color: lemonchiffon;
+    padding: 1rem;
+    margin: 0.5rem;
+}

@@ -1,4 +1,5 @@
 import './App.css'
+import HookContext from './components/HookContext/HookContext'
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
 // パスカルケースというのは頭文字が大文字で書く書き方
@@ -8,8 +9,10 @@ function App() {
 
   return (
     <>
-      <h1>React初期画面</h1>
-      <p>Reactがんばります</p>
+      <h1>Chapter7 フック基本</h1>
+      <h2>use + Context</h2>
+
+      <HookContext />
     </>
   )
 }
