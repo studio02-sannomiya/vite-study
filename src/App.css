@@ -1,0 +1,27 @@
+.container {
+    background-color: #a0d0fa;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.theme-demo {
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.theme-demo.light {
+    background-color: #fff;
+    color: #222;
+}
+
+.theme-demo.dark {
+    background-color: #222;
+    color: #fff;
+}
