@@ -1,0 +1,15 @@
+.app {
+    min-height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.app.light {
+    background-color: #fff;
+    color: #404756;
+}
+
+.app.dark {
+    background-color: #23272f;
+    color: #fff;
+}
