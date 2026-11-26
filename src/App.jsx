@@ -1,4 +1,5 @@
 import './App.css'
+import Refstudy from './components/Refstudy/Refstudy'
 
 // Reactで扱うコンポーネント（関数）の名前はパスカルケース
 // パスカルケースというのは頭文字が大文字で書く書き方
@@ -10,6 +11,8 @@ function App() {
     <>
       <h1>React初期画面</h1>
       <p>Reactがんばります</p>
+      <Refstudy />
+      <div style={{ height: '2000px' }}></div>
     </>
   )
 }
